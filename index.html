@@ -1,105 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Crystal Collectors</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Reset link -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> 
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <!-- Fonts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Scripts-->
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 
     <link rel="stylesheet" href="assets/style.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+
 
 </head>
 
 <body>
 
 
+        <div id="header">
 
-    <div class="container">
-
-        <div class="title">
-            <h1> Crystal Collector </h1>
-        </div>
-
-        <div class="directions">
-            <br>
-
-            <h2> Directions </h3>
-
-                <p>
-                    There will be four crystals displayed as buttons on the page.
-                    <br>
-                    You will be shown a random number at the start of the game.
-                    <br>
-                    When you click on a crystal, it will add a specific amount of points to the player's total score.
-                    <br>
-                    I will hide this amount until the you clicka a crystal.
-                    When you do click one, the score counter will update.
-                    <br>
-                    You win if their total score matches the random number from the beginning of the game.
-                    <br>
-                    The player loses if their score goes above the random number.
-
-
-                </p>
-                <br>
+            <h1><span><strong>Crystal Collectors!</STRONG></STRONG><span></h1>
 
         </div>
 
-        <div class="scorecontainer1">
-            <div class="row">
-                <div class="col-6">
-                    <h5 class="wins">Wins:</h5>
+
+            <div id="instructions">
+
+                    <h1 class="instructionsText" >Instructions</h1>
+
+<br>
+
+<p>
+
+* There's four crystals displayed as buttons on the page.
+<br>
+* The  will be shown a random number at the start of the game.
+<br>
+* When you click on a crystal, it will add a hidden specific amount of points to your total score.
+<br>
+* You'll win if your total score matches the random number from the beginning of the game.
+<br>
+* You'll lose if their score goes above the random number.
+<br>
+</p>
+
+
+
+              <div class="scoreContainer">
+
+                <div id="guessingNumber">
+
+                    <h2>Number to Guess: <span class="value"></span></h2>
                 </div>
-                <div class="col-6">
-                    <h5 class="losses">Losses:</h5>
+
+                <div id="totalScore">
+                <h2 id="yts">Your Total Score is: <span id="yourScore">0</span></h2>
                 </div>
+
+                
+
+                <div id="scoreboard">
+                    <h3><span id="status"></span></h3>
+                    <h3>Wins: <span id="win"></span></h3>
+                    <h3>Losses: <span id="loss"></span> </h3>
+                </div>
+
+    
+
+
+            <div id="crystals"></div>
+
             </div>
-        </div>
 
-        <div class="scorecontainer2">
-            <div class="row">
-                <div class="col-6">
-                    <h5 class="numberToMatch">Number to Match:</h5>
-                </div>
-                <div class="col-6">
-                    <h5 class="crystalCount"> Crystal count: </h5>
-                </div>
             </div>
-        </div>
-
-        <div class="images"> <img class="picsize crystal1" src="assets/crystal-blue.jpg" alt=""> <img
-                class="picsize crystal2" src="assets/crystal-orange.jpg" alt=""> <img class="picsize crystal3"
-                src="assets/crystal-purple.jpg" alt="">
-            <img class="picsize crystal4" src="assets/crystal-red.jpg" alt=""> </div>
+     
 
 
-    </div>
 
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script src="javascript/game.js"></script>
 
-    <script type="text/javascript" src="javascript/game.js"></script>
+<br>
+<br>
 
 </body>
 

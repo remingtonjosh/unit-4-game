@@ -1,74 +1,51 @@
 body {
-background: #cf8d8d;
+  background: url(https://wallpaperaccess.com/full/456652.jpg);
 }
 
 h1 {
-color: white;
-
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  padding-top: 25px;
+  font-size: 50px;
 }
 
 h2 {
-    color: #aa6565; 
-    font-family: 'Pacifico', cursive;
-  
-
+  text-align: center;
+  color: rgb(30, 0, 34);
+  font-size: 30px;
 }
 
-.title {
-    width: 100%;
-    height: 100px;
-    background: #aa6565;
-    color: white;
-    text-align: center;
-    font-family: 'Pacifico', cursive;
-
-
+p {
+  text-align: center;
 }
 
-.container{
-    width: 80%;
-    margin: auto;
-   
+.instructionsText {
+  text-align: center;
+  color: rgb(30, 0, 34);
+  font-size: 40px;
 }
 
-
-.directions {
-    background: #f7c5c5;
-    color: rgb(204, 121, 121);
-    text-align: center;
-    line-height: 25px;
-    margin-top: -50px;
-    margin-bottom: -16px;
-
-
+#header {
+  margin: auto;
+  background: rgb(30, 0, 34);
+  width: 90%;
+  height: 110px;
 }
 
-.scorecontainer1 {
-    width: 100%;
-    text-align: center;
-    background: white;
-    height: 25px;
-}
-.scorecontainer2 {
-    width: 100%;
-    text-align: center;
-    background: white;
-    height: 25px;
+#instructions {
+  margin: auto;
+  text-align: center;
+  background: whitesmoke;
+  width: 90%;
+  padding-top: 20px;
+  opacity: 0.9;
 }
 
-.scores {
-    width: 100%;
-    height: 100px;
-    margin-bottom: -25px;
-    background: #aa6565;
-}
-
-.images {
-    width: 100%;
-    background: rgb(245, 245, 245);
-}
-
-.picsize {
-width: 24%;
-  height: auto;
+.scoreContainer {
+  margin: auto;
+  background: whitesmoke;
+  text-align: center;
+  width: 90%;
+  padding-bottom: 50px;
 }
